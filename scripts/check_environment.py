@@ -27,7 +27,7 @@ def package_version(name: str) -> str | None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--isaaclab-root", type=Path, default=Path("/srv/IsaacLabCode"),
+        "--isaaclab-root", type=Path, default=Path("/home/kemove/zzk_data/IsaacLab"),
     )
     args = parser.parse_args()
     root = args.isaaclab_root.expanduser().resolve()

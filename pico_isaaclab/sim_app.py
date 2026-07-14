@@ -43,7 +43,7 @@ from typing import Any
 from isaaclab.app import AppLauncher
 
 
-REFERENCE_ROOT = os.environ.get("ISAACLAB_REFERENCE_ROOT", "/srv/IsaacLabCode")
+REFERENCE_ROOT = os.environ.get("ISAACLAB_REFERENCE_ROOT", "/home/kemove/zzk_data/IsaacLab")
 
 parser = argparse.ArgumentParser(description="PICO ROS 2 teleoperation for BRX in Isaac Lab.")
 parser.add_argument(

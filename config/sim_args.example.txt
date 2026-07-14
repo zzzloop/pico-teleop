@@ -1,8 +1,8 @@
 # One argument per line for documentation/reference. argparse does not read
 # this file automatically; copy the values into your launch command.
 --udp_port 9765
---urdf_path /srv/IsaacLabCode/BRX042501/BRX042501_wheel_4cams.urdf
---teleop_assets_root /srv/IsaacLabCode/teleop/assets
+--urdf_path /home/kemove/zzk_data/IsaacLab/BRX042501/BRX042501_wheel_4cams.urdf
+--teleop_assets_root /home/kemove/zzk_data/IsaacLab/teleop/assets
 --enable_cameras
 --livestream 2
 --device cuda:0

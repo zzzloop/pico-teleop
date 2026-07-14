@@ -50,23 +50,23 @@ flowchart LR
 ```bash
 # 终端 1：同时启动 ROS-TCP endpoint 和 PICO bridge
 source /opt/ros/humble/setup.bash
-source /srv/pico_teleop/ros2_ws/install/setup.bash
+source /home/kemove/zzk_data/pico-teleop/ros2_ws/install/setup.bash
 ros2 launch pico_teleop_bridge pico_teleop.launch.py
 
 # 终端 2：启动 Isaac Lab、WebRTC 和数据记录
-cd /srv/IsaacLabCode
-./isaaclab.sh -p /srv/pico_teleop/scripts/run_sim.py \
+cd /home/kemove/zzk_data/IsaacLab
+./isaaclab.sh -p /home/kemove/zzk_data/pico-teleop/scripts/run_sim.py \
   --livestream 2 --enable_cameras --device cuda:0 \
-  --urdf_path /srv/IsaacLabCode/BRX042501/BRX042501_wheel_4cams.urdf \
-  --teleop_assets_root /srv/IsaacLabCode/teleop/assets \
-  --record_root /srv/datasets/brx_pico_v3 --lerobot_format v3
+  --urdf_path /home/kemove/zzk_data/IsaacLab/BRX042501/BRX042501_wheel_4cams.urdf \
+  --teleop_assets_root /home/kemove/zzk_data/IsaacLab/teleop/assets \
+  --record_root /home/kemove/zzk_data/datasets/brx_pico_v3 --lerobot_format v3
 ```
 
 代码已移除 Isaac 进程直接导入 `rclpy`、跨机 UDP 和 Windows 本地仿真入口，避免运行时误接到另一套拓扑。
 
 ## 已核对的参考场景
 
-当前主机的 `D:\IsaacLabCode` 为 Isaac Lab `2.3.2` 参考项目。BRX 四相机 URDF 契约为 44 个 joint、33 个 non-fixed joint，头部双目基线为 0.060 m。服务器部署时将对应的 `BRX042501` 与 `teleop/assets` 内容同步到 `/srv/IsaacLabCode`，并使用 Linux 版 Isaac Lab/Isaac Sim 运行环境。
+当前 Windows 主机的 `D:\IsaacLabCode` 与服务器 `/home/kemove/zzk_data/IsaacLab` 内容对应，服务器仓库为 Isaac Lab `2.3.2`。BRX 四相机 URDF 契约为 44 个 joint、33 个 non-fixed joint，头部双目基线为 0.060 m。遥操作项目在服务器固定使用 `/home/kemove/zzk_data/pico-teleop`。
 
 ## 文件结构
 

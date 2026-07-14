@@ -82,7 +82,7 @@ R_ros = C * R_unity * C^-1
 
 ```bash
 source /opt/ros/humble/setup.bash
-source /srv/pico_teleop/ros2_ws/install/setup.bash
+source /home/kemove/zzk_data/pico-teleop/ros2_ws/install/setup.bash
 
 ros2 topic hz /pico/left_controller/pose
 ros2 topic hz /pico/right_controller/pose
