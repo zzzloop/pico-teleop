@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+build/
+install/
+log/
+datasets/
+*.usd
+*.mp4
+*.parquet
+*.egg-info/
+

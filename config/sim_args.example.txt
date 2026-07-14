@@ -1,0 +1,20 @@
+# One argument per line for documentation/reference. argparse does not read
+# this file automatically; copy the values into your launch command.
+--udp_port 9765
+--urdf_path /srv/IsaacLabCode/BRX042501/BRX042501_wheel_4cams.urdf
+--teleop_assets_root /srv/IsaacLabCode/teleop/assets
+--enable_cameras
+--livestream 2
+--device cuda:0
+--sim_dt 0.0333333333
+--render_hz 30
+--camera_hz 15
+--record_fps 15
+--pico_scale 0.3
+--position_only
+--pico_axis_map x,y,z
+--pico_command_timeout_s 0.35
+--pico_max_step_m 0.04
+--pico_max_rotation_step_deg 12
+--workspace_min -0.20 -1.20 0.35
+--workspace_max 1.20 1.20 1.35

@@ -1,0 +1,11 @@
+pico_teleop_bridge:
+  ros__parameters:
+    sim_port: 9765
+    packet_hz: 60.0
+    pose_timeout_s: 0.25
+    task: "Pick up the target block and place it in the bucket."
+    button_start: 0
+    button_pause: 1
+    button_record: 2
+    button_stop: 3
+    button_calibrate: 4
